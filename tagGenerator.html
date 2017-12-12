@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Word Generator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<div class="container">
+		<form onsubmit="return false" class="form-container">
+			<div class="form-title"><h2>Tag Generator</h2></div>
+			<div class="form-title">Amount of Words</div>
+			<input class="form-field" type="text" name="firstname" id="words" value="1000"/><br />
+			<div class="form-title">Maximum row length (characters)</div>
+			<input class="form-field" type="text" name="email"	id="rowLength" value="100" /><br />
+			<div class="submit-container">
+			<input class="submit-button" id="floatleft" type="submit" value="Remove" onclick="removeFunc();" />
+			<input class="submit-button" type="submit" value="Generate" onclick="bindFunc('words','rowLength');" />
+			</div>
+		</form>
+	</div>
+
+	<div id="wordTags" class="wordTagContainer">
+	</div>
+
+	<script src ="tagGeneratorJS.js"></script>
+</body>
+</html>
