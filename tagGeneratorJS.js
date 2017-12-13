@@ -88,7 +88,8 @@ var tagGeneratorModule = (function(){
 
   // Returning Public Methods
   return {
-    wordGenerator: wordGenerator
+    wordGenerator: wordGenerator,
+    removeFunc: removeFunc
   }
 }());
 
