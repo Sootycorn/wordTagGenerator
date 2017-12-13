@@ -57,6 +57,13 @@ var tagGeneratorModule = (function(){
     }
     sortWords(words, rowLength);
   }
+  
+  // Function cleaning div contentand array
+  var removeFunc = function() {
+    words = [];
+    const wordElement = document.getElementById('wordTags');
+    wordElement.innerHTML = '';
+  }
 
   // PUBLIC METHODS PUBLIC METHODS PUBLIC METHODS
   var wordGenerator = function(amount, rowLength) {
@@ -86,11 +93,11 @@ var tagGeneratorModule = (function(){
 }());
 
 // EXECUTING FUNCTIONS
-// Function cleaning div content
-var removeFunc = function() {
-  const wordElement = document.getElementById('wordTags');
-  wordElement.innerHTML = '';
+// Function cleaning div and array content
+var removeFunc = function(){
+    tagGeneratorModule.removeFunc();
 }
+
 // Function binding input values to the wordGenerator function
 var bindFunc = function(){
   let words = document.getElementById('words').value;
