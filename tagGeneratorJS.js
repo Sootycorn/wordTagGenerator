@@ -1,4 +1,4 @@
-// Module to structure and hide function / variables
+
 var tagGeneratorModule = (function(){
   // Array to store words generated from wordGenerator
   var words = [];
@@ -8,9 +8,9 @@ var tagGeneratorModule = (function(){
 
     // Setting variable that will count total amount of characters (excluding space and linebreaks)
     let characters = 0;
-    // Variable to calculate max allowed row length
+    // Boolean
     var CharLoop = true;
-    // Getting HTML element
+    // HTML element
     const wordElement = document.getElementById('wordTags');
     // Removing wordElement to update after deleting a word
     wordElement.innerHTML = '';
@@ -37,7 +37,7 @@ var tagGeneratorModule = (function(){
       // Appending the span elements to the div
       div.appendChild(span);
 
-      // If character length reached max. Set Charloop true to create a new div
+      // If character length => rowLength Set Charloop true to create a new div
       if(characters >= rowLength) {
         CharLoop = true;
         characters = words[i].length;
@@ -73,7 +73,7 @@ var tagGeneratorModule = (function(){
     for(let i = 0; i < amount; i++) {
       // Empty string for temporarly storing words
       let word = '';
-      // Variable randomly setting lenght of words with a max length of 12 min of 1
+      // Variable randomly setting length of words with a max length of 12 and minimum of 1
       var wordMaxLength = Math.floor(Math.random() * 12) + 1;
       // Loop making sure each words characters are random
       for(let w = 0; w < wordMaxLength; w++) {
